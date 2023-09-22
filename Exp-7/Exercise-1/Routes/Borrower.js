@@ -11,3 +11,5 @@ router.post('/borrowers', async (req, res) => {
     res.status(400).json({ error: 'Failed to add borrower.' });
   }
 });
+
+module.exports = router;

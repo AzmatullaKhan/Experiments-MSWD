@@ -11,3 +11,5 @@ router.post('/authors', async (req, res) => {
     res.status(400).json({ error: 'Failed to add author.' });
   }
 });
+
+module.exports = router;
