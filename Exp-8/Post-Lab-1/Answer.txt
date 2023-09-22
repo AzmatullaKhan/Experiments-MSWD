@@ -1,0 +1,7 @@
+db.Borrower.findOne()
+
+db.Borrower.find()
+
+db.Borrower.find({ borrowedBooks: "Let Us C" })
+
+db.Borrower.remove({ name: { $nin: ["Amit", "Rahul", "Anjana", "Afroz"] } })

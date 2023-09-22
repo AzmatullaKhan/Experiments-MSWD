@@ -1,0 +1,8 @@
+db.books.updateOne(
+  { Title: "1984" },
+  { $set: { Author: "George Orwell (pseudonym)" } }
+)
+
+db.books.deleteOne({ Title: "The Great Gatsby" })
+
+db.books.find()
