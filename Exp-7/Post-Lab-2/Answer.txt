@@ -1,0 +1,21 @@
+db.blogposts.insertOne({
+  title: "New Blog Post",
+  content: "This is the content of the new blog post.",
+  author: "Your Name",
+  date: new Date(),
+  comments: []
+})
+
+db.blogposts.find().sort({ date: -1 })
+
+//In index.js
+const blogPostId = ObjectId("your-blog-post-id"); // Replace with the actual ID of the blog post
+const newComment = {
+  commenterName: "Commenter's Name",
+  commentText: "This is a new comment."
+};
+
+db.blogposts.updateOne(
+  { _id: blogPostId },
+  { $push: { comments: newComment } }
+)
